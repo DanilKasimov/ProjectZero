@@ -1,10 +1,22 @@
 {% extends 'base.html' %}
-{% load static %}
-{% block title %}Task Manager{% endblock %}
+{% block title %}TaskManager{% endblock %} 
 {% block additionalload %}
-    <link rel="stylesheet" type="text/css" href="{% static 'TaskManager/css/style.css' %}"/>
-    <script src="{% static 'TaskManager/js/script.js' %}"></script>
+  {% verbatim  %}
+  <!--<script>
+    window.data = {
+      post: {{post_data | safe}},
+      get: {{get_data | safe}},
+    }
+  </script>-->
+  {% endverbatim %}
+  <script defer="defer" src="static/js/chunk-vendors.ca531689.js"></script>
+  <script defer="defer" src="static/js/app.b20226dd.js"></script>
+  <link href="static/css/app.bf008658.css" rel="stylesheet">
 {% endblock %}
 {% block content %}
-    <h1>TEST</h1>
-{% endblock  %}
+  {% verbatim  %}
+  <div id="app">
+
+  </div>
+  {% endverbatim %}
+{% endblock %}
